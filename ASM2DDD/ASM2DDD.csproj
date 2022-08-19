@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1598A093-6C7D-4737-AA47-A8EFE1E1A063}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ASM2DDD</RootNamespace>
+    <AssemblyName>ASM2DDD</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_01.Designer.cs">
+      <DependentUpon>Admin_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_02_Club.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_02_Club.Designer.cs">
+      <DependentUpon>Admin_02_Club.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Choose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Choose.Designer.cs">
+      <DependentUpon>Admin_Choose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_SpecializedM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_SpecializedM.Designer.cs">
+      <DependentUpon>Admin_SpecializedM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Active Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Active Report.Designer.cs">
+      <DependentUpon>A_Active Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_ClubEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_ClubEvent.Designer.cs">
+      <DependentUpon>A_ClubEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_EventM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_EventM.Designer.cs">
+      <DependentUpon>A_EventM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_StudentEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_StudentEvent.Designer.cs">
+      <DependentUpon>A_StudentEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClubManager_Choose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubManager_Choose.Designer.cs">
+      <DependentUpon>ClubManager_Choose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClubManager_V_Club.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubManager_V_Club.Designer.cs">
+      <DependentUpon>ClubManager_V_Club.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClubM_ClubEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubM_ClubEvent.Designer.cs">
+      <DependentUpon>ClubM_ClubEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClubM_Event.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubM_Event.Designer.cs">
+      <DependentUpon>ClubM_Event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClubM_StudentE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubM_StudentE.Designer.cs">
+      <DependentUpon>ClubM_StudentE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClubM_V_CMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubM_V_CMember.Designer.cs">
+      <DependentUpon>ClubM_V_CMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_MemberClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_MemberClub.Designer.cs">
+      <DependentUpon>A_MemberClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User_Choose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Choose.Designer.cs">
+      <DependentUpon>User_Choose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_ClubEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_ClubEvent.Designer.cs">
+      <DependentUpon>User_ClubEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_V_Club.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_V_Club.Designer.cs">
+      <DependentUpon>User_V_Club.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_V_Event.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_V_Event.Designer.cs">
+      <DependentUpon>User_V_Event.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin_01.resx">
+      <DependentUpon>Admin_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_02_Club.resx">
+      <DependentUpon>Admin_02_Club.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Choose.resx">
+      <DependentUpon>Admin_Choose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_SpecializedM.resx">
+      <DependentUpon>Admin_SpecializedM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Active Report.resx">
+      <DependentUpon>A_Active Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_ClubEvent.resx">
+      <DependentUpon>A_ClubEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_EventM.resx">
+      <DependentUpon>A_EventM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_MemberClub.resx">
+      <DependentUpon>A_MemberClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_StudentEvent.resx">
+      <DependentUpon>A_StudentEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClubManager_Choose.resx">
+      <DependentUpon>ClubManager_Choose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClubManager_V_Club.resx">
+      <DependentUpon>ClubManager_V_Club.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClubM_ClubEvent.resx">
+      <DependentUpon>ClubM_ClubEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClubM_Event.resx">
+      <DependentUpon>ClubM_Event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClubM_StudentE.resx">
+      <DependentUpon>ClubM_StudentE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClubM_V_CMember.resx">
+      <DependentUpon>ClubM_V_CMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="User_Choose.resx">
+      <DependentUpon>User_Choose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_ClubEvent.resx">
+      <DependentUpon>User_ClubEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_V_Club.resx">
+      <DependentUpon>User_V_Club.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_V_Event.resx">
+      <DependentUpon>User_V_Event.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
