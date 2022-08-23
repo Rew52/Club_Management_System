@@ -29,7 +29,13 @@ namespace ASM2DDD
 
         private void btExit_Click(object sender, EventArgs e) //After clicking "Exit" the program will run the following commands.
         {
-            Application.Exit(); // Close program
+            // Ask before exiting.
+            if (MessageBox.Show("Are you sure you want to get rid of the software?", "",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                // Close program
+                Application.Exit(); 
+            }
         }
 
         private void btLogin_Click(object sender, EventArgs e) //After clicking "Login" the program will run the following commands.
