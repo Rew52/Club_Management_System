@@ -51,10 +51,15 @@ namespace ASM2DDD
         // Notice errors to avoid interrupting the running system.
         private void btLogout_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Close();
-            Login login_form = new Login();
-            login_form.ShowDialog();
+            if (MessageBox.Show("Want to exit your account?", "",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {   // Close current page.
+                this.Close();
+                // Open the page you want to go to.
+                this.Hide();
+                Login login_form = new Login();
+                login_form.ShowDialog();
+            }
         }
 
         private void btBack_Click(object sender, EventArgs e)
