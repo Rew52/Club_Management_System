@@ -61,10 +61,15 @@ namespace ASM2DDD
 
         private void btLogout_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Close();
-            Login login_form = new Login();
-            login_form.ShowDialog();
+            if (MessageBox.Show("Want to exit your account?", "",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {   // Close current page.
+                this.Close();
+                // Open the page you want to go to.
+                this.Hide();
+                Login login_form = new Login();
+                login_form.ShowDialog();
+            }
         }
 
         private void btRemove_Click(object sender, EventArgs e)// After clicking "Refresh Input" the program will run the following commands.
