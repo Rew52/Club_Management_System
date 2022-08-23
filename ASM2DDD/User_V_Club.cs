@@ -28,12 +28,15 @@ namespace ASM2DDD
 
         private void btLogout_Click(object sender, EventArgs e)// After clicking "Log out" the program will run the following commands.
         {
-            // Close current page.
-            this.Close();
-            // Open the page you want to go to.
-            this.Hide();
-            Login login_form = new Login();
-            login_form.ShowDialog();
+            if (MessageBox.Show("Want to exit your account?", "",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {   // Close current page.
+                this.Close();
+                // Open the page you want to go to.
+                this.Hide();
+                Login login_form = new Login();
+                login_form.ShowDialog();
+            }
         }
 
         private void btBack_Click(object sender, EventArgs e)// After clicking "Back" the program will run the following commands.
