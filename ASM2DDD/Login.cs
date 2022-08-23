@@ -36,39 +36,45 @@ namespace ASM2DDD
         {
             try 
             {
-                // Database query statement.
-                SqlDataAdapter da = new SqlDataAdapter("SELECT (CASE role WHEN 1 THEN 'Admin' WHEN 2 THEN 'ClubManager' WHEN 3 THEN 'User' END) " +
-                    "AS Role FROM users WHERE username ='" + txtUsername.Text + "' AND password ='" + txtPassword.Text + "'", conn);
+                // Your account verification system
+                SqlDataAdapter da = new SqlDataAdapter("SELECT (CASE role WHEN 1 THEN 'Admin' WHEN 2 THEN 'ClubManager' WHEN 3 THEN 'User' END) AS Role FROM users WHERE username ='" + txtUsername.Text + "' AND password ='" + txtPassword.Text + "'", conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                if (dt.Rows.Count == 1) //Database with data will run the cases.
+                if((txtPassword.Text.Length) > 5)
                 {
-                    this.Hide();
-                    switch (dt.Rows[0]["Role"] as string)
+                    if (dt.Rows.Count == 1) //Database with data will run the cases.
                     {
-                        case "Admin": // Notice and move to Administrator rights and close the Login page.
-                            MessageBox.Show("Admin login successfully!");
-                            Admin_Choose Admin_Choose = new Admin_Choose();
-                            Admin_Choose.ShowDialog();
-                            this.Close();
-                            break;
-                        case "ClubManager": // Notice and move to Club Manager rights and close the Login page.
-                            MessageBox.Show("Club Manager login successfully!");
-                            ClubManager_Choose ClubManager_Choose = new ClubManager_Choose();
-                            ClubManager_Choose.ShowDialog();
-                            this.Close();
-                            break;
-                        case "User": // Notice and move to Student rights and close the Login page.
-                            MessageBox.Show("User login successfully!");
-                            User_Choose User_Choose = new User_Choose();
-                            User_Choose.ShowDialog();
-                            this.Close();
-                            break;
+                        this.Hide();
+                        switch (dt.Rows[0]["Role"] as string)
+                        {
+                            case "Admin": // Notice and move to Administrator rights and close the Login page.
+                                MessageBox.Show("Admin login successfully!");
+                                Admin_Choose Admin_Choose = new Admin_Choose();
+                                Admin_Choose.ShowDialog();
+                                this.Close();
+                                break;
+                            case "ClubManager": // Notice and move to Club Manager rights and close the Login page.
+                                MessageBox.Show("Club Manager login successfully!");
+                                ClubManager_Choose ClubManager_Choose = new ClubManager_Choose();
+                                ClubManager_Choose.ShowDialog();
+                                this.Close();
+                                break;
+                            case "User": // Notice and move to Student rights and close the Login page.
+                                MessageBox.Show("User login successfully!");
+                                User_Choose User_Choose = new User_Choose();
+                                User_Choose.ShowDialog();
+                                this.Close();
+                                break;
+                        }
+                    }
+                    else // If you enter incorrect information, you will be notified
+                    {
+                        MessageBox.Show("Invalid Username or password");
                     }
                 }
-                else // If you enter incorrect information, you will be notified
+                else // The message requires entering enough characters for the password
                 {
-                    MessageBox.Show("Invalid Username or password"); 
+                    MessageBox.Show("You must enter at least 6 characters for the password!");
                 }
             }
             catch (SqlException ex) // Notice errors to avoid interrupting the running system.
